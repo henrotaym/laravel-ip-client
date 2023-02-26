@@ -1,6 +1,6 @@
 {
-    "name": "henrotaym/versioning-package-template",
-    "description": "Basic versioned php package.",
+    "name": "henrotaym/laravel-ip-client",
+    "description": "Helpers concerning client performing requests.",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -18,18 +18,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Henrotaym\\VersioningPackageTemplate\\": "src"
+            "Henrotaym\\LaravelIpClient\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Henrotaym\\VersioningPackageTemplate\\Tests\\": "tests"
+            "Henrotaym\\LaravelIpClient\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Henrotaym\\VersioningPackageTemplate\\Providers\\VersioningPackageTemplateServiceProvider"
+                "Henrotaym\\LaravelIpClient\\Providers\\LaravelIpClientServiceProvider"
             ]
         }
     }

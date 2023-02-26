@@ -1,13 +1,13 @@
 <?php
-namespace Henrotaym\VersioningPackageTemplate\Contracts;
+namespace Henrotaym\LaravelIpClient\Contracts;
 
 use Henrotaym\LaravelPackageVersioning\Services\Versioning\Contracts\VersionablePackageContract;
 use Henrotaym\LaravelContainerAutoRegister\Services\AutoRegister\Contracts\AutoRegistrableContract;
 
 /**
- * Versioning package.
+ * LaravelIpClient package facade implementation contract.
  */
-interface VersioningPackageTemplateContract extends VersionablePackageContract, AutoRegistrableContract
+interface LaravelIpClientContract extends VersionablePackageContract, AutoRegistrableContract
 {
     
 }

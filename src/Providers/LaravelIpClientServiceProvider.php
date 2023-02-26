@@ -1,14 +1,14 @@
 <?php
-namespace Henrotaym\VersioningPackageTemplate\Providers;
+namespace Henrotaym\LaravelIpClient\Providers;
 
-use Henrotaym\VersioningPackageTemplate\VersioningPackageTemplate;
+use Henrotaym\LaravelIpClient\LaravelIpClient;
 use Henrotaym\LaravelPackageVersioning\Providers\Abstracts\VersionablePackageServiceProvider;
 
-class VersioningPackageTemplateServiceProvider extends VersionablePackageServiceProvider
+class LaravelIpClientServiceProvider extends VersionablePackageServiceProvider
 {
     public static function getPackageClass(): string
     {
-        return VersioningPackageTemplate::class;
+        return LaravelIpClient::class;
     }
 
     protected function addToRegister(): void

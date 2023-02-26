@@ -1,15 +1,15 @@
 <?php
-namespace Henrotaym\VersioningPackageTemplate\Tests;
+namespace Henrotaym\LaravelIpClient\Tests;
 
-use Henrotaym\VersioningPackageTemplate\VersioningPackageTemplate;
+use Henrotaym\LaravelIpClient\LaravelIpClient;
 use Henrotaym\LaravelPackageVersioning\Testing\VersionablePackageTestCase;
-use Henrotaym\VersioningPackageTemplate\Providers\VersioningPackageTemplateServiceProvider;
+use Henrotaym\LaravelIpClient\Providers\LaravelIpClientServiceProvider;
 
 class TestCase extends VersionablePackageTestCase
 {
     public static function getPackageClass(): string
     {
-        return VersioningPackageTemplate::class;
+        return LaravelIpClient::class;
     }
 
     public function getEnvironmentSetUp($app)
@@ -20,7 +20,7 @@ class TestCase extends VersionablePackageTestCase
     public function getServiceProviders(): array
     {
         return [
-            VersioningPackageTemplateServiceProvider::class
+            LaravelIpClientServiceProvider::class
         ];
     }
 

@@ -1,7 +1,7 @@
 <?php
-namespace Henrotaym\VersioningPackageTemplate\Tests\Feature;
+namespace Henrotaym\LaravelIpClient\Tests\Feature;
 
-use Henrotaym\VersioningPackageTemplate\Tests\TestCase;
+use Henrotaym\LaravelIpClient\Tests\TestCase;
 
 class ExampleFeatureTest extends TestCase
 {
