@@ -1,15 +1,18 @@
 <?php
-namespace Henrotaym\LaravelIpClient\Tests;
+namespace Henrotaym\LaravelTrustupIoIpClient\Tests;
 
-use Henrotaym\LaravelIpClient\LaravelIpClient;
+use Henrotaym\LaravelTrustupIoIpClient\LaravelTrustupIoIpClient;
+use Henrotaym\LaravelApiClient\Providers\ClientServiceProvider;
+use Henrotaym\LaravelTrustupIoIpClient\Providers\LaravelTrustupIoIpClientServiceProvider;
 use Henrotaym\LaravelPackageVersioning\Testing\VersionablePackageTestCase;
-use Henrotaym\LaravelIpClient\Providers\LaravelIpClientServiceProvider;
 
 class TestCase extends VersionablePackageTestCase
 {
+    use AppTestSuite;
+    
     public static function getPackageClass(): string
     {
-        return LaravelIpClient::class;
+        return LaravelTrustupIoIpClient::class;
     }
 
     public function getEnvironmentSetUp($app)
@@ -20,7 +23,8 @@ class TestCase extends VersionablePackageTestCase
     public function getServiceProviders(): array
     {
         return [
-            LaravelIpClientServiceProvider::class
+            ClientServiceProvider::class,
+            LaravelTrustupIoIpClientServiceProvider::class
         ];
     }
 
