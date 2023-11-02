@@ -12,3 +12,9 @@ services:
       dockerfile: PhpDockerfile
     volumes:
       - ./:/usr/src/app
+  node:
+    build:
+      context: .
+      dockerfile: NodeDockerfile
+    volumes:
+      - ./:/usr/src/app

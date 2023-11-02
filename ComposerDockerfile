@@ -1,6 +1,6 @@
 ARG COMMAND
 
-FROM composer:2.5.2
+FROM composer:2.6
 
 WORKDIR /usr/src/app
 

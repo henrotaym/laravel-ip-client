@@ -1,9 +1,9 @@
 ARG COMMAND
 
-FROM php:8.2-cli
+FROM node:18-alpine
 
 WORKDIR /usr/src/app
 
 COPY . .
 
-CMD php $COMMAND
+CMD $COMMAND

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+if [ "$1" == "bootstrap" ]
+    then
+        docker run \
+            -it \
+            --rm \
+            -u "$(id -u):$(id -g)" \
+            -v "$(pwd):/usr/src/app" \
+            -w /usr/src/app \
+            composer:2.6 \
+            composer install --ignore-platform-reqs && \
+        docker run \
+            -it \
+            --rm \
+            -u "$(id -u):$(id -g)" \
+            -v "$PWD":/usr/src/app \
+            -w /usr/src/app node:18-alpine \
+            yarn install && \
+        docker-compose build --no-cache composer && \
+        docker-compose build --no-cache php && \
+        docker-compose build --no-cache node
+    exit
+fi
+
+if [ "$1" == "npm" ] || [ "$1" = "yarn" ]
+    then
+        docker-compose run --rm node $@
+    exit
+fi
+
+if [ "$1" == "test" ]
+    then
+        docker-compose run --rm php vendor/bin/phpunit ${@:2}
+    exit
+fi
+
+docker-compose run --rm $@

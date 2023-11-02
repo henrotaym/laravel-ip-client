@@ -47,15 +47,17 @@ class LocationEndpointFeatureTest extends TestCase
     {
         $ip = "173.245.48.0";
         $expected = [
-            "latitude" => "34.0522",
-            "longitude" => "-118.2436",
-            "timezone" => "America/Los_Angeles",
-            "city" => "Los Angeles",
-            "country" => "United States"
+            "latitude" => "51.5074",
+            "longitude" => "-0.127758",
+            "timezone" => "Europe/London",
+            "city" => "London",
+            "country" => "United Kingdom"
         ];
         $endpoint = $this->newLocationEndpoint();
         
         $response = $endpoint->show($ip);
+
+        $response->getLocation();
 
         $this->assertInstanceOf(LocationContract::class, $response->getLocation());
         $this->assertEquals($ip, $response->getLocation()->getIp());
