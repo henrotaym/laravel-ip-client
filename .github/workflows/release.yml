@@ -1,18 +1,14 @@
 name: Release
 
 on:
-  workflow_run:
-    workflows: ["Linter"]
-    types:
-      - completed
+  push:
     branches:
-      - main
+      - v2.x.x-laravel-10
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: Release
     runs-on: ubuntu-latest
     steps:
