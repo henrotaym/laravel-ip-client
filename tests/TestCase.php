@@ -15,7 +15,7 @@ class TestCase extends VersionablePackageTestCase
         return LaravelTrustupIoIpClient::class;
     }
 
-    public function getEnvironmentSetUp($app)
+    public function getEnvironmentSetUp($app): void
     {
         $this->loadMigrations();
     }
