@@ -7,3 +7,11 @@ services:
     image: "laravel-ip-client-php-local"
     volumes:
       - ./:/opt/apps/app
+  bun:
+    build:
+      context: .
+      target: bun
+      dockerfile: Dockerfile
+    image: "laravel-ip-client-bun-local"
+    volumes:
+      - ./:/opt/apps/app
